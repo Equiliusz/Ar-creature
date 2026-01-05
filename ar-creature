@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <title>AR Test</title>
-  <script type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js">
-  </script>
+  <meta charset="UTF-8">
+  <title>AR Creature</title>
+
+  <!-- Model Viewer - Android safe -->
+  <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 80vh;
+      background: #111;
+    }
+  </style>
 </head>
-<body style="margin:0;background:#000;">
+
+<body>
+
+<h2>AR Creature</h2>
+<p>Tik op de knop om AR te starten</p>
 
 <model-viewer
   src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
   ar
-  ar-modes="webxr scene-viewer quick-look"
+  ar-modes="scene-viewer webxr"
   camera-controls
   auto-rotate
-  style="width:100vw;height:100vh;">
+  shadow-intensity="1">
 </model-viewer>
 
 </body>
