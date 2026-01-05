@@ -11,19 +11,19 @@
 
   <style>
     body {
-      margin:0;
-      background:#111;
-      color:white;
-      font-family:sans-serif;
-      text-align:center;
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1, p {
+      margin: 10px;
     }
     model-viewer {
-      width:100vw;
-      height:90vh;
-      background:#000;
-    }
-    h1,p {
-      margin:10px;
+      width: 100vw;
+      height: 90vh;
+      background: #000;
     }
   </style>
 </head>
@@ -33,20 +33,15 @@
 <h1>✨ AR Stoer Teen-Creature ✨</h1>
 <p>Tik op het 3D-object om AR te starten</p>
 
-<!-- Placeholder model (Astronaut) -->
+<!-- Vervang hieronder de .glb link door jouw eigen teen-creature bestand -->
 <model-viewer
-  <model-viewer
   src="stoer-creature.glb"
+  alt="Stoer Teen-Creature"
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
   auto-rotate
-  shadow-intensity="1"
-  src="https://creature-ar.netlify.app/stoer-creature.glb"
-  ar
-  ar-modes="webxr scene-viewer quick-look"
-  camera-controls
-  auto-rotate>
+  shadow-intensity="1">
 </model-viewer>
 
 </body>
