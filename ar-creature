@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>AR Teen Creature</title>
+  <meta charset="utf-8">
+  <title>AR Test</title>
   <script type="module"
-  src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js">
-</script>
-  <style>
-    body{margin:0;background:#111;color:white;font-family:sans-serif;text-align:center;}
-    model-viewer{width:100%;height:80vh;}
-  </style>
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js">
+  </script>
 </head>
-<body>
-
-<h1>✨ AR Creature Demo</h1>
-<p>Scan met je telefoon en bekijk in AR</p>
+<body style="margin:0;background:#000;">
 
 <model-viewer
   src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
@@ -22,7 +15,7 @@
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
   auto-rotate
-  style="width:100%;height:70vh;">
+  style="width:100vw;height:100vh;">
 </model-viewer>
 
 </body>
