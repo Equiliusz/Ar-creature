@@ -2,44 +2,34 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>AR Creature</title>
+  <title>AR Teen Creature</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Android + iOS veilige model-viewer -->
+  <script type="module" 
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    button {
-      font-size: 18px;
-      padding: 16px 24px;
-      border-radius: 12px;
-      border: none;
-      background: #00ffcc;
-      margin-top: 40px;
-    }
+    body {margin:0;background:#111;color:white;font-family:sans-serif;text-align:center;}
+    model-viewer {width:100vw;height:85vh;background:#000;}
+    h1,p {margin:10px;}
   </style>
 </head>
 
 <body>
 
-<h2>AR Creature</h2>
-<p>Tik op de knop om het creature in AR te zien</p>
+<h1>✨ AR Teen Creature ✨</h1>
+<p>Scroll naar beneden en tik op het object om AR te starten</p>
 
-<button onclick="openAR()">Start AR</button>
-
-<script>
-function openAR() {
-  const url =
-    "intent://arvr.google.com/scene-viewer/1.0" +
-    "?file=https://modelviewer.dev/shared-assets/models/Astronaut.glb" +
-    "&mode=ar_only" +
-    "#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;end;";
-  window.location.href = url;
-}
-</script>
+<model-viewer
+  src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+  ar
+  ar-modes="scene-viewer webxr quick-look"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1">
+</model-viewer>
 
 </body>
 </html>
